@@ -13,10 +13,21 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.10.3",
     "@vue/composition-api": "^0.5.0",
+    "animate.css": "^4.1.1",
+    "element-ui": "^2.14.1",
     "nuxt": "^2.12.2",
-    "swiper": "^5.3.8"
+    "swiper": "^5.3.8",
+    "three": "^0.123.0",
+    "v-animate-css": "0.0.3",
+    "vue-baberrage": "^3.2.4",
+    "vue-fullpage": "^2.0.5",
+    "vue-fullpage.js": "^0.1.6"
   },
   "devDependencies": {
-    "postcss-custom-properties": "^9.1.1"
+    "jquery": "^3.5.1",
+    "node-sass": "^5.0.0",
+    "postcss-custom-properties": "^9.1.1",
+    "sass-loader": "^10.1.0",
+    "style-loader": "^2.0.0"
   }
 }

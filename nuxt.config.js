@@ -19,7 +19,8 @@ export default {
         content: process.env.npm_package_description || ''
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+    { rel: 'stylesheet',  href: '//at.alicdn.com/t/font_2239326_eke48hywn1.css' }]
   },
   server: {
     host: '0.0.0.0',
@@ -43,7 +44,8 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['assets/style/var.css', 'assets/style/common.css'],
+  // css: ['assets/style/var.css', 'assets/style/common.css'],
+  css:[ 'element-ui/lib/theme-chalk/index.css'],
   router: {
     linkActiveClass: 'link_active', //此class在Menu.vue
     linkExactActiveClass: ''
@@ -68,7 +70,7 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {},
+    extend(config, ctx) { },
     postcss: {
       plugins: {
         // 开启css样式嵌套

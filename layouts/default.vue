@@ -1,56 +1,44 @@
-<style lang="postcss" module="css">
-.container {
-  background-color: var(--color-bg);
-  min-height: 100vh;
-  & .body {
-    min-height: calc(100vh - var(--height-header) - var(--height-footer));
-  }
-}
-</style>
+
 <template>
-  <div :class="css.container">
-    <Menu />
-    <div :class="css.body">
+  <div class="container">
+    <Header />
+    <div class="body">
       <nuxt />
     </div>
-    <Bottom />
-    <Tools />
+    <Footer />
   </div>
 </template>
 <script>
-import Menu from '@/components/Menu'
-import Bottom from '@/components/Bottom'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
+
 export default {
   components: {
-    Menu,
-    Bottom
-  }
+    Header,
+    Footer,
+  },
 }
 </script>
-<style>
-html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 14px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-  color: var(--color-font-1);
-}
 
-*,
-*:before,
-*:after {
-  padding: 0;
-  box-sizing: border-box;
+<style lang="scss">
+@import '~@/assets/style/mixin.scss';
+* {
   margin: 0;
+  padding: 0;
 }
 
-ul,
-ol {
-  list-style: none;
+.box {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  height: 100vh;
+  min-width: 1200px;
+  .body {
+    z-index: 2;
+  }
 }
 </style>
